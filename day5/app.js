@@ -75,3 +75,34 @@ const a1 = [[1,2],[3,4,5],[6,7], [8,9,0,1]];
 const a2 = a1.flat(Infinity);
 console.log(a2);
 
+// map(), filter, reduce() in js
+let arr = [2,3,4,5,6,7]
+let updatearray = arr.map(val=> val+3)
+console.log(arr);
+console.log(updatearray);
+
+// filter method 
+let filteredarray = arr.filter(val => val <5)
+console.log(filteredarray);
+// reduce method
+let reducedarray = arr.reduce((prev, curr)=> curr = prev + curr)
+console.log(reducedarray);
+// reverse method 
+let reversedarray = [...arr].reverse();
+console.log(reversedarray);
+// reverse using a stack(LIFO)
+let rev =[];
+while (arr.length>0) {
+    rev.push(arr.pop());
+}
+console.log(rev);
+
+// min and max in js 
+let arra= [12,13,14,15];
+let minvale = Math.min(...arra); 
+let maxvlue = Math.max(...arra);
+console.log("min value is : ",minvale);
+console.log("max value is :", maxvlue);
+
+
+
