@@ -1,0 +1,97 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>this is heading </h1>
+    <h1>this s se</h1>
+    <button onclick="changetext()">changetext</button>
+</body>
+<script>
+    function changetext(){
+        let element = document.getElementsByTagName("h1")[1];
+        element.textContent="this is changed text";
+    }
+</script>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: 'Courier New', Courier, monospace;
+            margin: 0%;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            transition: background-color 0.5s, color 0.5s;
+        }
+
+        .container{
+            text-align: center;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 8px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            background-color: white;
+        }
+
+        button{
+            cursor: pointer;
+            background-color: aqua;
+            color: white;
+            transition: background-color 0.5s;
+        }
+
+        body.light-mode{
+            background-color: #f4f4f4;
+            color: #333
+        }
+
+        body.dark-mode{
+            background-color: #333;
+            color: brown;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>welcome to the dark/ light theme.</h1>
+        <p>this page demo the light / dark mode <strong>dark</strong> and <strong> light</strong> better experience </strong></p>
+        <p>switch the dark mode</p>
+        <button id="theme-toggle"> switch to dark mode </button>
+        <h2>benefits of dark mode </h2>
+        <ul>
+            <li>Reduced eye strain</li>
+            <li>Better battery life on OLED screens</li>
+        </ul>
+        <p>learn more about this on 
+            <a href="https://www.w3schools.com/howto/howto_js_toggle_dark_mode.asp" target="_blank">w3schools</a>
+        </p>
+    </div>
+
+    <script>
+        const togglebutton = document.getElementById("theme-toggle");
+        const body = document.body;
+        body.classList.add('light-mode');
+
+        togglebutton.addEventListener('click', () => {
+            if(body.classList.contains('light-mode')){
+                body.classList.replace('light-mode', 'dark-mode');
+                togglebutton.textContent = 'Switch to light mode';  // Fixed here
+            }else{
+                body.classList.replace('dark-mode', 'light-mode');
+                togglebutton.textContent = 'Switch to dark mode';  // Fixed here
+            }
+        });
+    </script>
+</body>
+</html>
