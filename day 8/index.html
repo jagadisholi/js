@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function func() {
+        document.getElementById("hi").innerHTML = " this is js events on click";
+    }
+</script>
+
+<body>
+    <button onclick="func()"> click here</button>
+    <p id="hi">this is pre object</p>
+    <button onclick="alert('button clicked')">click me </button>
+    <h2>form validation</h2>
+    <form id="validate">
+        <input type="text" placeholder="enter sth" id="formInput" />
+        <button type="submit">submit</button>
+    </form>
+</body>
+<!-- <script>
+    document.querySelector("#validate").addEventListener("submit",(e) =>{
+    let input =document.querySelector("#formInput");
+    if(!input.value){
+        e.preventDefault();
+        alert("input cant be empty");
+    }
+});
+</script> -->
+<script src="app.js"></script>
+
+</html>
