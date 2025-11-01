@@ -33,18 +33,29 @@
 //     console.log("third clicked");
 //     })
 
-let first=document.getElementById('one')
-let second=document.getElementById('two')
-let third=document.getElementById('three')
-first.addEventListener('click',function(e){
-    e.stopPropagation()
-    console.log("first clicked");
-    })
-second.addEventListener('click',function(e){
-    e.stopPropagation()
-        console.log("second clicked");
-    })
-    third.addEventListener('click',function(e){
-        e.stopPropagation()
-    console.log("third clicked");
-    })
+// let first=document.getElementById('one')
+// let second=document.getElementById('two')
+// let third=document.getElementById('three')
+// first.addEventListener('click',function(e){
+//     e.stopPropagation()
+//     console.log("first clicked");
+//     })
+// second.addEventListener('click',function(e){
+//     e.stopPropagation()
+//         console.log("second clicked");
+//     })
+//     third.addEventListener('click',function(e){
+//         e.stopPropagation()
+//     console.log("third clicked");
+//     })
+
+const custiomUi =document.createElement("Ul");
+for(var i =1; i<10; i++){
+    const newElement =document.createElement("li");
+    newElement.textContent= "this is a line "+i;
+    newElement.addEventListener('click',() =>{
+        console.log("respond");
+        
+    });
+    custiomUi.appendChild(newElement);
+}
