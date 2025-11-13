@@ -23,3 +23,4 @@ mydog.dogname = 'abb' //using setter method
 console.log(mydog.name);
 
 mydog.dog__regular_method();
+
